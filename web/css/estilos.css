@@ -1,0 +1,140 @@
+
+* {
+    font-family: Arial, Verdana;
+}
+
+p {
+    font-size: 20px;
+}
+
+h1 {
+    color:blue;
+    text-align: center;
+    text-shadow:2px 2px 5px rgb(0,0,150);
+    font-family:  fuente1;
+    
+}
+
+header, section, aside, footer, nav, article {
+    display: block; /* para tratar a los elementos como caja, para que no esten en linea*/
+
+   }
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    background: -webkit-linear-gradient(top, #FFFFFF, #006699); /*Para poner dos colores*/
+    background: -moz-linear-gradient(top, #FFFFFF, #006699); 
+}
+
+nav {
+    text-align: center;
+    background-color: #A9F5F2;    
+    min-height: 80px;
+}
+nav ul {
+    padding-top: 20px;
+}
+nav ul li {
+    display: inline;
+    border: 1px solid green;
+    padding: 10px 20px;
+    margin-right:  40px;
+    border-radius: 20px; /*Redondea los bordes*/
+    box-shadow: 5px 10px grey;  /*para dar sombra*/
+    
+}
+
+nav ul li:hover{
+    background-color: yellow;
+}
+
+section {
+    width:70%;
+    float: left;
+    background-color: #cccccc; 
+}
+
+article {
+    font-size: 20px;
+    text-align: center;
+}
+
+aside {
+    width:30%;
+    float: left;
+    background-color: rgb(49, 227, 247);
+}
+
+footer {
+    clear: both; /* para que el pie no flote con los demas */
+    text-align: center;
+    
+}
+
+#img100 {
+     width: 100%;
+}
+
+#parrafo1 {
+    color: green;
+    font-weight: bold;
+    border: 1px solid #000000;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 30px;
+    padding: 20px;
+}
+
+.rojo {
+    color:rgb(255,0,0);
+
+    
+}
+
+/*
+ Esto es un comentario en css
+*/
+footer a {
+    color:green;
+    text-decoration: none;
+    cursor: help;
+}
+
+.botonactivo{
+    background-color: yellow;
+}
+
+/*Fuentes añadidas */
+@font-face {
+    font-family: 'fuente1';
+    src: url('../fuentes/fuente1.ttf');
+}
+
+table{
+    font-family:  fuente1;
+    border-collapse: collapse;
+    border: 1px solid red;
+    background-color: white;
+}
+th, tr, td{
+    border: 1px dotted blue;
+    padding: 20px;
+}
+th {
+    background-color: red;
+}
+
+/*Diseño Movil*/
+@media only screen and (max-width: 600px) {
+    section {
+        width: 100%;
+    }
+    aside {
+        width: 100%;
+    }
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}

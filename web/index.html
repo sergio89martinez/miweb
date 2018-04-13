@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charsets="utf-8">
+    <meta name="description" content="primera pagina">
+    <meta name="keywords" content="html, css, javascript">
+    
+    <link rel="icon" type="image/png" href="./img/favicon/favicon1.png" />  
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/funciones.js"></script>
+    
+    <title>Primera pagina curso</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script>    
+    
+    $(document).ready(function() {
+    $('#ejemplo').DataTable( {
+        data: dataSet,
+        columns: [
+            { title: "Nombre" },
+            { title: "Sueldo" },
+            { title: "Salario" }
+        ]
+    } );
+} );
+     </script>
+    
+      <script>   
+    $(document).ready(function() {
+    $('#example').DataTable( {
+        "order": [[ 1, "desc" ]],
+        "language": {
+            "lengthMenu": "Mostrando _MENU_ filas por pagina",
+            "sSearch": "Buscar",
+            "zeroRecords": "No encontrado - lo siento",
+            
+            "info": "mostrando pagina page _PAGE_ de _PAGES_",
+            "infoEmpty": "No hay datos",
+            "infoFiltered": "(filtered from _MAX_ total records)"
+        }
+    } );
+} );
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1 class="rojo">Academia Cuenca</h1>
+    </header>
+    <nav>
+        <ul>
+            <li class="botonactivo">Inicio</li>
+            <li><a href="https://as.com/" target="_blank"> Blog</a></li>
+            <li> <a href="html/contacto.html">Contacto</a></li>
+            <li><a href="html/video.html">Video</a></li>
+        </ul>
+    </nav>
+    <section>
+
+    
+    <table id="ejemplo">
+        
+    </table>
+    <hr> 
+        
+       <article onclick="mensaje();"> Esto es un articulo con superindice 100m<sup>2</sup> y subindice H2<sub>o</sub>
+       </article>
+        <p id="parrafo1"> Este es el texto del primer mensaje escrito en <em>un parrafo</em> con enfasis</p>
+        <p class="rojo">Esto es un parrafo con <strong>negrita</strong></p>
+        <p class="rojo">Esto es un parrafo <mark>subrallado</mark></mark></p>
+       <article>
+        este es el texto del segundo mensaje
+       </article>
+       <p onclick="muestra_texto();">Haz clic</p>
+       <img src="img/img1.jpg" alt="rotweiler" title="rotweiler" width="50%">
+       <p id="nombre">Sergio</p>
+       <p id="apellido">Martinez</p>
+       
+       <p id="nombrecompleto" onclick="concatenaNombre();">clic para nombre completo</p>
+       
+       
+    </section>
+    <aside>
+        <h3>Tabla con DataBases</h3>
+        <table id="example">
+           <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Sueldo</th>
+                <th>Horas</th>
+            </tr>
+            </thead>
+           <tbody>
+            <tr>
+                <td>Javier</td>
+                <td>3500</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Fran</td>
+                <td>2000</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>Ana</td>
+                <td>2500</td>
+                <td>150</td>
+            </tr>
+            </tbody>
+        </table>
+        <hr>
+        <h4>Cuentas con Javascript</h4>
+        <label>numero 1</label>
+        <br>
+        <input type="number" id="num1">
+        <br>
+        <label>numero 2</label>
+        <br>
+        <input type="number" id="num2">
+        <br>
+        <input type="button" id="suma" value="Sumar" onclick="suma();">
+        <input type="button" id="multi" value="Multiplicar" onclick="mult();">
+        <input type="button" id="expo" value="exponente" onclick="exp();">
+        <br>
+        <input type="button" id="resta" value="Restar" onclick="resta();">
+        <input type="button" id="divi" value="Dividir" onclick="div();">
+        <input type="button" id="pares" value="Son Pares?" onclick="par();">
+        <br>
+        <br>
+        <label>Total</label>
+        <input type="text" id="resultado">
+        <p id="parrafo2">......</p>
+        <p id="parrafo3">......</p>
+        <hr>
+        <h4>Funciones JavaScript</h4>
+        <p id="coches" onclick="muestracoches();">haz clic para ver los coches</p>
+        <hr>        
+        <p id="mas80" onclick="mas80()">haz clic para ver quien pesa mas de 80</p>
+        <hr>
+        <p onclick="notas();" id="notas">clic para ver el resumen de las notas</p>
+        <hr>
+        <p id="emple" onclick="emple();">Empleados</p>
+    </aside>
+    <footer>
+        Desarrollado por <a href="http://as.com" target="_blank">sergio</a>
+    </footer>
+</body>
+</html>
